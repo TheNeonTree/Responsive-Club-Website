@@ -1,0 +1,608 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, sans-serif;
+    background-image: url(images/header-bg.png);
+    background-color: #00224d;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    flex-direction: column;
+}
+
+/* Header styles */
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Ustal stałą wysokość nagłówka */
+    padding: 0 5%;
+    background-color: #ffffff;
+    color: white;
+    border-bottom: 0.50rem solid #A0153E;
+    z-index: 100;
+}
+
+.header-title {
+    flex: 1;
+    text-align: left;
+    color: #A0153E;
+    font-family: "Edu AU VIC WA NT Hand", sans-serif;
+    font-size: 2rem;
+}
+
+.header-logo {
+    width: 160px;
+    height: 160px;
+    background-color: #ffffff; /* Ten sam kolor co tło nagłówka */
+    border-radius: 50%; /* Tworzy okrągły kształt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ukrywa nadmiar obrazu poza okręgiem */
+    padding: 2.3rem;
+    border: 0.50rem solid #A0153E;
+}
+
+.header-logo img {
+    width: 100%; /* Dopasowuje szerokość obrazka do rozmiaru diva */
+    height: 100%; /* Dopasowuje wysokość obrazka do rozmiaru diva */
+    object-fit: cover; /* Zapewnia, że obrazek zachowuje proporcje i wypełnia div */
+}
+
+.header-nav {
+    flex: 1;
+    text-align: right;
+}
+
+.header-nav ul {
+    list-style-type: none;
+}
+
+.header-nav ul li {
+    display: inline;
+    margin-left: 1.25rem;
+    
+}
+
+.header-nav ul li a {
+    color: #A0153E;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+
+/* Reviews Section */
+
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    
+}
+
+
+.reviews-card {
+    background-color: #5D0E41;
+    height: 280px;
+    display: grid;
+    grid-template-columns: 210px 300px;
+    grid-template-rows: 60px 40px 120px 60px;
+}
+
+.movie-cover {
+    grid-area: 1 / 1 / 5 / 2;
+    height: 280px;
+    overflow: hidden;
+}
+
+.movie-title {
+    grid-area: 1 / 2 / 2 / 3;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.50rem 0 0.50rem 1rem;
+}
+
+.movie-rating {
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 0.50rem 0 0.50rem 1rem;
+    color: rgb(121, 121, 121);
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    
+}
+
+.movie-rating p {
+    color: orange;
+    padding-right: 1rem;
+}
+
+.movie-reviews {
+    grid-area: 3 / 2 / 4 / 3;
+    color: white;
+    padding: 0.50rem 1rem 0.50rem 1rem;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.read-more {
+    grid-area: 4 / 2 / 5 / 3;
+    padding-right: 1rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.button {
+    background-color: #A0153E;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    float: right;
+}
+
+.button:hover {
+    background-color: #FF204E;
+    cursor: pointer;
+}
+
+.movie-cover img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.checked {
+    color: orange;
+  }
+
+.last-reviews h3 {
+    background-color: #440a30;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.top-rated h3 {
+    background-color: #330824;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* About us Section */
+
+.about-us {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    max-width: 1200px;
+    margin-top: 2rem;
+    
+}
+
+.about-us p {
+    padding: 2rem 2rem 0 2rem;
+    font-weight: 300;
+}
+
+.about-us p:last-of-type {
+    padding-bottom: 2rem;
+}
+
+.about-us h1, 
+.upcoming-premieres h1,
+.club-members h1,
+.gallery h1 {
+    width: 100%;
+    background-color: #A0153E;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+}
+
+.upcoming-premieres {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    max-width: 1200px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #75102f;
+    padding: 0.7rem;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f71f6017;
+}
+
+th {
+    background-color: #75102f;
+    color: white;
+    border: 1px solid #610d26;
+    padding: 1rem 0;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.date-column, .center {
+    text-align: center;
+}
+
+.title-column {
+    padding-left: 2rem;
+    font-weight: 600;
+}
+
+.about-us span {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.member-card {
+    display: grid;
+    grid-template-columns: 180px 1fr 55px;
+    grid-template-rows: 1fr 3fr;
+    background-color: white;
+    
+}
+
+.club-members-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    grid-gap: 0.5rem;
+}
+
+
+.member-name {
+    grid-area: 1 / 2 / 2 / 3;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+    padding: 1.4rem;
+    font-size: 1.3rem;
+}
+
+
+.member-photo {
+    grid-area: 1 / 1 / 5 / 3;
+    overflow: hidden;
+    height: 100%;
+    width: 180px;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-desc {
+    grid-area: 2 / 2 / 5 / 3 ;
+    color:black;
+    font-weight: 300;
+    padding: 1.3rem 7rem 1.3rem 1.3rem;
+}
+
+.member-desc p {
+    margin-bottom: 1rem;
+}
+
+.favorite-gene {
+    background-color: #5D0E41;
+    width: 55px;
+    grid-area: 1 / 3 / 3 / 4;
+    
+}
+
+.favorite-gene img {
+    width: 55px;
+    padding: 10px;
+}
+
+
+.gallery {
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.24);
+    max-width: 1200px;
+    margin: 2rem 0;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 24.3%;
+    min-width: 240px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    border-top: 0.50rem solid #A0153E;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+}
+
+.created {
+    grid-area: 4 / 2 / 5 / 3;
+    font-size: 0.75rem;
+}
+
+.footer-h2 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.address {
+    grid-area: 3 / 4 / 5 / 5;
+}
+
+.created,
+.footer-h2,
+.address {
+    font-family: "Montserrat", sans-serif;;
+}
+
+.footer-h2 span,
+.created span {
+    font-weight: 700;
+}
+
+
+.burger {
+    display: none;
+}
+
+
+/* MEDIA Section */
+
+
+@media only screen and (max-width: 1100px) {
+    .reviews {
+        grid-gap: 0.5rem;
+        margin-top: 2rem;
+    }
+    .header-nav {
+        display: none;
+    }
+    .burger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+    
+    .burger .line {
+        width: 25px;
+        height: 3px;
+        background: #A0153E;
+    }
+    .header-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:570px) {
+    .movie-cover {
+        display: none;
+    }
+    .reviews-card {
+        grid-template-columns: 300px;
+        grid-template-rows: 60px 40px 120px 60px;
+    }
+    
+    .movie-title {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    .movie-rating {
+        grid-area: 2 / 1 / 3 / 2;
+        
+    }
+
+    .movie-reviews {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .read-more {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    
+    .button {
+        background-color: #A0153E;
+        padding: 10px;
+        width: 100px;
+        color: white;
+        float: right;
+    }
+    
+    .button:hover {
+        background-color: #FF204E;
+        cursor: pointer;
+    }
+    .last-reviews h3,
+    .top-rated h3 {
+        font-size: 1rem;
+    }
+    .main {
+        display: block;
+    }
+    .about-us h1, 
+    .upcoming-premieres h1,
+    .club-members h1,
+    .gallery h1 {
+        font-size: 1.2rem;
+    }
+    td {
+        font-size: 0.75rem;
+    }
+    th {
+        font-size: 0.75rem;
+    }
+    .member-card {
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 65px 3fr;
+    }
+
+    .member-photo {
+        grid-area: 1 / 1 / 5 / 3;
+        overflow: hidden;
+        height: 100%;
+        width: 100px;
+    }
+
+    .member-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .member-desc {
+        grid-area: 2 / 2 / 5 / 3 ;
+        color:black;
+        font-weight: 300;
+        padding: 0 1.3rem 1.3rem 1.3rem;
+    }
+
+    .member-desc p {
+        margin-bottom: 1rem;
+    }
+
+    .favorite-gene {
+        display: none;
+        
+    }
+    .gallery {
+        height: auto;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.24);
+        max-width: 1200px;
+        margin: 2rem 0;
+    }
+    
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .gallery-item {
+        width: 100%;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+    .created {
+        grid-area: 6 / 1 / 7 / 2;
+        text-align: center;
+        
+    }
+    
+    .footer-h2 {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-left: 2rem;
+    }
+    
+    .address {
+        grid-area: 3 / 1 / 6 / 1;
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width:840px) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+    .created {
+        grid-area: 6 / 1 / 7 / 2;
+        text-align: center;
+        
+    }
+    
+    .footer-h2 {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-left: 2rem;
+    }
+    
+    .address {
+        grid-area: 3 / 1 / 6 / 1;
+        padding-left: 2rem;
+    }
+}
